@@ -30,13 +30,14 @@ const lookup = {
   "?": "?",
   ",": ",",
 };
-
-function rot13(encodedStr) {
+	let A = "A".charCodeAt(0); /// 65
+	let Z = "Z".charCodeAt(0); // 90
+function rot13(str) {
   // let decodedArr = []; // Your Result goes here
   // Only change code below this line
-let ans = "" ; // "" => "$N#A"
+		let ans = "" ; // "" => "$N#A"
     // str = "$A#N" => "$N#A"
-    for(let i = 0; i < str.length; i++){
+	    for(let i = 0; i < str.length; i++){
         // i = 0
         let currentChar = str[i].charCodeAt(0);
         if(currentChar <= Z && currentChar >= A){
